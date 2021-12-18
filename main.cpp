@@ -163,10 +163,10 @@ int main(){
 			for (; file >> passwd;) {
 				if (passwd == userpass) {
 					cout << "Password: " << passwd << endl;
-					system("pause>nul");
-					return 0;
+					break;
 				}
 			}
+			break;
 		}
 		else if (exit == "2" || exit == "2)" || exit == "Brut" || exit == "brut" || exit == "2)brut" || exit == "2)Brut") {
 			thread thr1(threads1, ref(passbrut), userpass);
