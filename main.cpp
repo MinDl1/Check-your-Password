@@ -23,6 +23,10 @@ void threads1(string &passbrut1, string userpass) {
 			g_lock.unlock();
 			return;
 		}
+		if (passbrut1 != ".") {
+			g_lock.unlock();
+			return;
+		}
 		g_lock.unlock();
 		for (int b = 0; b < 62; b++) {
 			g_lock.lock();
@@ -32,6 +36,10 @@ void threads1(string &passbrut1, string userpass) {
 			if (passbrut == userpass) {
 				passbrut1 = passbrut;
 				cout << "Pass: " << passbrut << endl;
+				g_lock.unlock();
+				return;
+			}
+			if (passbrut1 != ".") {
 				g_lock.unlock();
 				return;
 			}
@@ -45,6 +53,10 @@ void threads1(string &passbrut1, string userpass) {
 				if (passbrut == userpass) {
 					passbrut1 = passbrut;
 					cout << "Pass: " << passbrut << endl;
+					g_lock.unlock();
+					return;
+				}
+				if (passbrut1 != ".") {
 					g_lock.unlock();
 					return;
 				}
@@ -87,6 +99,10 @@ void threads2(string &passbrut2, string userpass) {
 			g_lock.unlock();
 			return;
 		}
+		if (passbrut1 != ".") {
+			g_lock.unlock();
+			return;
+		}
 		g_lock.unlock();
 		for (int b = 61; b >= 0; b--) {
 			g_lock.lock();
@@ -96,6 +112,10 @@ void threads2(string &passbrut2, string userpass) {
 			if (passbrut == userpass) {
 				passbrut2 = passbrut;
 				cout << "Pass: " << passbrut << endl;
+				g_lock.unlock();
+				return;
+			}
+			if (passbrut1 != ".") {
 				g_lock.unlock();
 				return;
 			}
@@ -109,6 +129,10 @@ void threads2(string &passbrut2, string userpass) {
 				if (passbrut == userpass) {
 					passbrut2 = passbrut;
 					cout << "Pass: " << passbrut << endl;
+					g_lock.unlock();
+					return;
+				}
+				if (passbrut1 != ".") {
 					g_lock.unlock();
 					return;
 				}
