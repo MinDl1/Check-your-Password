@@ -99,7 +99,7 @@ void threads2(string &passbrut2, string userpass) {
 			g_lock.unlock();
 			return;
 		}
-		if (passbrut1 != ".") {
+		if (passbrut2 != ".") {
 			g_lock.unlock();
 			return;
 		}
@@ -115,7 +115,7 @@ void threads2(string &passbrut2, string userpass) {
 				g_lock.unlock();
 				return;
 			}
-			if (passbrut1 != ".") {
+			if (passbrut2 != ".") {
 				g_lock.unlock();
 				return;
 			}
@@ -132,7 +132,7 @@ void threads2(string &passbrut2, string userpass) {
 					g_lock.unlock();
 					return;
 				}
-				if (passbrut1 != ".") {
+				if (passbrut2 != ".") {
 					g_lock.unlock();
 					return;
 				}
