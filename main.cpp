@@ -25,7 +25,7 @@ int main(){
 	while (1) {
 		cout << "0)Exit; 1)File; 2)Brut;\n::";
 		cin >> exit;
-		if (exit == "1" || exit == "1)" || exit == "File" || exit == "file" || exit == "1)exit" || exit == "1)Exit") {
+		if (exit == "1" || exit == "1)" || exit == "File" || exit == "file" || exit == "1)file" || exit == "1)File") {
 			string filename;
 			cout << "Enter Filename: ";
 			cin >> filename;
